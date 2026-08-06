@@ -1,0 +1,15 @@
+{
+	"name": "adelearningsessions",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b2b13257-a46d-4585-9e10-ad26ef67111b",
+		"tenantId": "a24f2a84-6666-479b-a7b2-b92e277cb0c1"
+	}
+}

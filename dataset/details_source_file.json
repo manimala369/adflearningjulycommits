@@ -1,0 +1,39 @@
+{
+	"name": "details_source_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorageLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Details.xlsx",
+				"fileSystem": "input"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Prop_0",
+				"type": "String"
+			},
+			{
+				"name": "Prop_1",
+				"type": "String"
+			},
+			{
+				"name": "Prop_2",
+				"type": "String"
+			},
+			{
+				"name": "Prop_3",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
