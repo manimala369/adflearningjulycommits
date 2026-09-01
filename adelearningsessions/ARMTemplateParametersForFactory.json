@@ -8,10 +8,16 @@
 		"AzureDataLakeStorageLS_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorageLS1_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabaseLS_password": {
 			"value": ""
 		},
 		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"value": "https://adepracticesessions.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorageLS1_properties_typeProperties_url": {
 			"value": "https://adepracticesessions.dfs.core.windows.net/"
 		},
 		"AzureDataLakeStorageLSwithKV_properties_typeProperties_url": {

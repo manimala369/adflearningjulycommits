@@ -11,11 +11,19 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS'"
 		},
+		"AzureDataLakeStorageLS1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS1'"
+		},
 		"AzureSqlDatabaseLS_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseLS'"
 		},
 		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adepracticesessions.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorageLS1_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adepracticesessions.dfs.core.windows.net/"
 		},
@@ -69,11 +77,17 @@
 					"AzureDataLakeStorageLS_accountKey": {
 						"value": "[parameters('AzureDataLakeStorageLS_accountKey')]"
 					},
+					"AzureDataLakeStorageLS1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorageLS1_accountKey')]"
+					},
 					"AzureSqlDatabaseLS_password": {
 						"value": "[parameters('AzureSqlDatabaseLS_password')]"
 					},
 					"AzureDataLakeStorageLS_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorageLS1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorageLS1_properties_typeProperties_url')]"
 					},
 					"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
 						"value": "[parameters('AzureKeyVaultLS_properties_typeProperties_baseUrl')]"
