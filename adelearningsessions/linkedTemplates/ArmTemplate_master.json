@@ -47,6 +47,14 @@
 			"type": "string",
 			"defaultValue": "dbadmin"
 		},
+		"RestLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com"
+		},
+		"RestServiceLS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/users"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -101,12 +109,38 @@
 					"AzureSqlDatabaseLS_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabaseLS_properties_typeProperties_userName')]"
 					},
+					"RestLS_properties_typeProperties_url": {
+						"value": "[parameters('RestLS_properties_typeProperties_url')]"
+					},
+					"RestServiceLS_properties_typeProperties_url": {
+						"value": "[parameters('RestServiceLS_properties_typeProperties_url')]"
+					},
 					"AzureDataLakeStorageLSwithKV_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorageLSwithKV_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "adelearningsessions_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adelearningsessions_ArmTemplate_0')]"
+			]
 		}
 	]
 }

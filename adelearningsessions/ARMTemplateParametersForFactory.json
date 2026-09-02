@@ -34,6 +34,12 @@
 		},
 		"AzureSqlDatabaseLS_properties_typeProperties_userName": {
 			"value": "dbadmin"
+		},
+		"RestLS_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com"
+		},
+		"RestServiceLS_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/users"
 		}
 	}
 }
